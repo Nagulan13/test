@@ -29,18 +29,19 @@
         </div>
 
         <script>
-            let form = document.getElementById("loginForm");
+            const form = document.getElementById("loginForm");
 
             form.addEventListener("submit", function (event) {
 
-                let email = document.getElementById("email").value;
-                let password = document.getElementById("password").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
 
-                if(email == "" || password == "") {
+                if(email ==="" || password ==="") {
                     message.innerHTML = "Empty fields.";
                     event.preventDefault(); //Stop submit
                 } else {
                     alert("Login Successful");
+                    window.location.href("home.php");
                 }
             } );
 
