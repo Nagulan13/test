@@ -1,0 +1,20 @@
+.container {
+    margin: 10px;
+    align-content: center;
+
+}
+
+.top {
+    align-items: center;
+}
+
+h4 {
+
+    color: blueviolet;
+
+}
+
+.main {
+
+    margin-left: 10px;
+}
