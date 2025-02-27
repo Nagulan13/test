@@ -1,3 +1,22 @@
+<?php
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    if($email == "nagu1370@gmail.com" && $password == "nagu1370") {
+        echo "Login Success";
+    } else {
+        echo "Invalid";
+        window.location.href = "index.html";
+    }
+} else {
+    echo "Error";
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
