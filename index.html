@@ -14,14 +14,14 @@
                 <h4>LOGIN</h4>
             </div>
             <div class="main">
-                <form action="home.php" method="POST" id="loginForm">
+                <form action="auth.php" method="POST" id="loginForm">
                     <label>Email :</label>
                     <input type="email" placeholder="email" id="email">
                     <br>
                     <label>Password :</label>
                     <input type="password" placeholder="password" id="password">
                     <br>
-                    <input type="submit" value="Start">
+                    <input type="submit" value="Login">
                 </form>
                 <p id="message" style="color: red;"></p>
             </div>
@@ -31,7 +31,7 @@
         <script>
             const form = document.getElementById("loginForm");
 
-            form.addEventListener("submit", function (event) {
+            form.addEventListener("submit", (event) => {
 
                 const email = document.getElementById("email").value;
                 const password = document.getElementById("password").value;
