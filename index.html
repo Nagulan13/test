@@ -14,20 +14,36 @@
                 <h4>LOGIN</h4>
             </div>
             <div class="main">
-                <form action="auth.php" method="POST" >
+                <form action="auth.php" method="POST" id="loginForm">
                     <label>Email :</label>
-                    <input type="email" placeholder="email" name="email">
+                    <input type="email" placeholder="email" id="email">
                     <br>
                     <label>Password :</label>
-                    <input type="password" placeholder="password" name="password">
+                    <input type="password" placeholder="password" id="password">
                     <br>
-                    <input type="submit">
+                    <input type="submit" value="Start">
                 </form>
+                <p id="message" style="color: red;"></p>
             </div>
             
         </div>
 
         <script>
+            let form = document.getElementById("loginForm");
+
+            form.addEventListener("submit", function (event) {
+
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+
+                if(email == "" || password == "") {
+                    message.innerHTML = "Empty fields.";
+                    event.preventDefault(); //Stop submit
+                } else {
+                    alert("Login Successful");
+                }
+            } );
+
 
         </script>
 

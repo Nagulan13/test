@@ -5,11 +5,13 @@
 <head></head>
 <body>
 
-<p><?php
+<?php
 
-echo $_POST["email"];
 
-?></p>
+echo $_POST["email"] . "<br>";
+echo $_POST["password"];
+
+?>
 
 </body>
 </html>
