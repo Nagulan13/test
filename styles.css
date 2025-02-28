@@ -1,20 +1,48 @@
 .wrapper {
     width: 100%;               /* Full width */
-    max-width: 1200px;         /* Limit the content width */
-    margin: 0 auto;            /* Center the container horizontally */
-    padding: 20px;             /* Add space inside the container */
-    box-sizing: border-box;     /* Include padding in width */
-    background-color: rgb(159, 38, 246);
-  }
-  
-.container {
-    display: flex;        /* Flex layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center;  /* Vertically center items */
+    max-width: 1200px;         /* Limit width */
+    margin: 0 auto;            /* Center the content */
     padding: 20px;
-    gap: 20px;           /* Space between items */
-  }
-  
+    box-sizing: border-box;
+    display: flex;             /* Flex layout */
+    flex-direction: column;     /* Vertical layout (2 rows) */
+    gap: 20px;                 /* Space between rows */
+    background-color: rgb(159, 38, 246);
+    height: 100vh;             /* Full height screen */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;     /* Make 2 rows layout */
+    height: 100%;              /* Full height for container */
+    gap: 20px;                 /* Space between navbar and content */
+}
+
+.navbar {
+    font-family: sans-serif;
+    font-size: 100%;
+    display: flex;             /* Horizontal menu */
+    justify-content: space-around; /* Equal space between items */
+    align-items: center;       /* Vertically center items */
+    padding: 20px; 
+    background-color: rgb(202, 255, 26);
+    border-radius: 2px;        /* Rounded corners */
+    text-align: center;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+
+}
+
+.content {
+    flex: 1;                   /* Fill remaining space */
+    padding: 20px;
+    background-color: rgb(45, 255, 26);
+    border-radius: 2px;       /* Rounded corners */
+    text-align: center;
+}
+
 
 .top {
     align-items: center;
@@ -22,7 +50,7 @@
 
 h4 {
 
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 
 }
 

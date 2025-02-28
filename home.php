@@ -16,10 +16,14 @@
                 <div class="navbar">
                     <a href="#">Basic Column</a>
                     <a href="#">Stacked Column</a>
-                    <a hreft="#">Multiple axes</a>
+                    <a href="#">Multiple axes</a>
+                    <a href="#">Dual axes</a>
+                    <a href="#">Downdrill</a>
                 </div>
                 <div class="content">
                     <div class="chart">
+
+                    <p>TESTING</p>
 
                     
                     </div>
