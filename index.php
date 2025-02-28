@@ -17,10 +17,10 @@
                 <div class="main">
                     <form action="auth.php" method="POST" id="loginForm">
                         <label>Email :</label>
-                        <input type="email" placeholder="email" id="email">
+                        <input type="email" placeholder="email" id="email" name="email">
                         <br>
                         <label>Password :</label>
-                        <input type="password" placeholder="password" id="password">
+                        <input type="password" placeholder="password" id="password" name="password">
                         <br>
                         <input type="submit" value="Login">
                     </form>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <script>
+        <!-- <script>
             const form = document.getElementById("loginForm");
 
             form.addEventListener("submit", (event) => {
@@ -43,12 +43,12 @@
                     event.preventDefault(); //Stop submit
                 } else {
                     alert("Login Successful");
-                    window.location.href="home.php";
+                    window.location.href = "home.php";
                 }
             } );
 
 
-        </script>
+        </script> -->
 
     </body>
     

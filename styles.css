@@ -1,8 +1,20 @@
+.wrapper {
+    width: 100%;               /* Full width */
+    max-width: 1200px;         /* Limit the content width */
+    margin: 0 auto;            /* Center the container horizontally */
+    padding: 20px;             /* Add space inside the container */
+    box-sizing: border-box;     /* Include padding in width */
+    background-color: rgb(159, 38, 246);
+  }
+  
 .container {
-    margin: 10px;
-    align-content: center;
-
-}
+    display: flex;        /* Flex layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center;  /* Vertically center items */
+    padding: 20px;
+    gap: 20px;           /* Space between items */
+  }
+  
 
 .top {
     align-items: center;
@@ -10,7 +22,7 @@
 
 h4 {
 
-    color: blueviolet;
+    color: whitesmoke;
 
 }
 
