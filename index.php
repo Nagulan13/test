@@ -15,14 +15,14 @@
                     <h4>LOGIN</h4>
                 </div>
                 <div class="main">
-                    <form action="auth.php" method="POST" id="loginForm">
+                    <form action="auth.php" method="POST" >
                         <label>Email :</label>
                         <input type="email" placeholder="email" id="email" name="email">
                         <br>
                         <label>Password :</label>
                         <input type="password" placeholder="password" id="password" name="password">
                         <br>
-                        <input type="submit" value="Login">
+                        <input type="submit" name="submit" value="Login">
                     </form>
                     <p id="message" style="color: red;"></p>
                 </div>

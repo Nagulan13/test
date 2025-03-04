@@ -1,20 +1,31 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+include 'db_conn.php';
 
-    if ($email == "nagu1370@gmail.com" && $password == "nagu1370") {
-        echo "Login Success";
-        header("Location: home.php"); // Redirect to home
-        exit();
+if (isset($_POST["submit"])) {
+
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+
+    $sql = "SELECT * FROM users WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+        if ($password == $user['password']) {
+
+            session_start();
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $password;
+
+            echo "<script>alert('Login Successful!'); window.location.href = 'home.php';</script>";
+        } else {
+            echo "Invalid Email or Password, Try <a href = 'index.php'>Login</a> again.";
+        }
     } else {
-        echo "Invalid Login";
-        header("Location: index.html"); // Back to Login Page
-        exit();
+        echo "No Record.";
     }
-} else {
-    echo "405 Not Allowed";
+    mysqli_close($conn);
 }
 
 ?>

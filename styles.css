@@ -5,56 +5,70 @@
     padding: 20px;
     box-sizing: border-box;
     display: flex;             /* Flex layout */
-    flex-direction: column;     /* Vertical layout (2 rows) */
-    gap: 20px;                 /* Space between rows */
-    background-color: rgb(159, 38, 246);
-    height: 100vh;             /* Full height screen */
+    flex-direction: column;     /* Vertical layout */
+    gap: 20px;                 /* Space between elements */
+    /* background-color: rgb(255, 255, 255); */
+    height: 100vh;             /* Full height */
 }
 
 .container {
     display: flex;
-    flex-direction: column;     /* Make 2 rows layout */
-    height: 100%;              /* Full height for container */
+    flex-direction: column;     /* Vertical layout */
+    height: 100%;              
     gap: 20px;                 /* Space between navbar and content */
 }
 
 .navbar {
-    font-family: sans-serif;
-    font-size: 100%;
-    display: flex;             /* Horizontal menu */
-    justify-content: space-around; /* Equal space between items */
-    align-items: center;       /* Vertically center items */
-    padding: 20px; 
-    background-color: rgb(202, 255, 26);
-    border-radius: 2px;        /* Rounded corners */
+    width: 100%;               /* Full width */
+    position: fixed;            /* Fixed navbar at top */
+    top: 0;                    /* Stick to the top */
+    left: 0;                   /* Align to left */
+    background-color: #333;     /* Dark background */
+    padding: 15px 0;           /* Padding for better design */
+    text-align: center;         /* Center links */
+    z-index: 1000;             /* On top of everything */
+}
+
+.navbar a {
+    color: white;              /* Text color */
+    text-decoration: none;      /* Remove underline */
+    padding: 10px 20px;         /* Space between links */
+    margin: 0 10px;            /* Margin between links */
+    display: inline-block;      
+    font-weight: bold;
+    transition: 0.3s;          /* Smooth hover effect */
+}
+
+.navbar a:hover {
+    background-color: #555;     /* Hover background */
+    border-radius: 5px;         /* Rounded corners */
+}
+
+.content {
+    margin-top: 80px;          /* Create space below fixed navbar */
+    flex: 1;                  /* Fill remaining space */
+    padding: 20px;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 10px;
     text-align: center;
 }
 
 a {
-    text-decoration: none; /* Remove underline */
-
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.content {
-    flex: 1;                   /* Fill remaining space */
-    padding: 20px;
-    background-color: rgb(45, 255, 26);
-    border-radius: 2px;       /* Rounded corners */
-    text-align: center;
+a:link, a:visited {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
 }
 
-
-.top {
-    align-items: center;
+a:hover, a:active {
+    color: rgb(175, 0, 0);
 }
 
 h4 {
-
-    color: rgb(0, 0, 0);
-
-}
-
-.main {
-
-    margin-left: 10px;
+    color: black;
 }
